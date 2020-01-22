@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "detect_root_user_activity" {
-  source           = "github.com/pangolock/reflex/modules/cwe_sns_email"
+  source           = "github.com/cloudmitigator/reflex/modules/cwe_sns_email"
   rule_name        = "DetectRootUserActivity"
   rule_description = "Rule to check when the root user performs any actions"
 
