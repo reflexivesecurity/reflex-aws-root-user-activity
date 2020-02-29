@@ -1,5 +1,5 @@
 module "detect_root_user_activity" {
-  source           = "git@github.com:cloudmitigator/reflex.git//modules/cwe_sns_email?ref=v0.0.1"
+  source           = "git@github.com:cloudmitigator/reflex.git//modules/cwe_sns_email?ref=v0.2.0"
   rule_name        = "DetectRootUserActivity"
   rule_description = "Rule to check when the root user performs any actions"
 
@@ -17,7 +17,6 @@ module "detect_root_user_activity" {
 }
 PATTERN
 
-  topic_name = "DetectRootUserActivity"
   target_id  = "DetectRootUserActivity"
-  email      = var.email
+  sns_topic_arn = var.sns_topic_arn
 }
