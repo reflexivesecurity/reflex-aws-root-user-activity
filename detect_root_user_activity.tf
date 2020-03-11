@@ -1,5 +1,5 @@
 module "detect_root_user_activity" {
-  source           = "git::https://github.com/cloudmitigator/reflex-engine.git//modules/cwe_lambda?ref=v0.5.1"
+  source           = "git::https://github.com/cloudmitigator/reflex-engine.git//modules/cwe_lambda?ref=v0.5.2"
   rule_name        = "DetectRootUserActivity"
   rule_description = "Rule to check when the root user performs any actions"
 
@@ -24,22 +24,6 @@ PATTERN
   environment_variable_map = {
     SNS_TOPIC = var.sns_topic_arn
   }
-  custom_lambda_policy = <<EOF
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "s3:GetEncryptionConfiguration"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    }
-  ]
-}
-EOF
-
-
 
   queue_name    = "DetectRootUserActivity"
   delay_seconds = 60
