@@ -1,5 +1,5 @@
 module "detect_root_user_activity" {
-  source           = "git@github.com:cloudmitigator/reflex.git//modules/cwe_sns_email?ref=v0.2.0"
+  source           = "git::https://github.com/cloudmitigator/reflex-engine.git//modules/cwe_sns_email?ref=v0.2.0"
   rule_name        = "DetectRootUserActivity"
   rule_description = "Rule to check when the root user performs any actions"
 
