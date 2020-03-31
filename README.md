@@ -27,7 +27,7 @@ module "detect-root-user-activity" {
 Note: The `sns_topic_arn` and `reflex_kms_key_id` example values shown here assume you generated resources with `reflex build`. If you are using the Terraform on its own you need to provide your own valid values.
 
 ## Configuration
-This rule has no configuration options
+This rule has no configuration options.
 
 ## Contributing
 If you are interested in contributing, please review [our contribution guide](https://docs.cloudmitigator.com/about/contributing.html).
