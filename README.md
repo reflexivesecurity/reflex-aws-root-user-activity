@@ -11,7 +11,7 @@ To use this rule either add it to your `reflex.yaml` configuration file:
 ```
 rules:
   aws:
-    - reflex-aws-detect-root-user-activity:
+    - detect-root-user-activity:
         version: latest
 ```
 
