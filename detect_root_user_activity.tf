@@ -1,5 +1,5 @@
 module "detect_root_user_activity" {
-  source           = "git::https://github.com/cloudmitigator/reflex-engine.git//modules/cwe_lambda?ref=v0.5.2"
+  source           = "git::https://github.com/cloudmitigator/reflex-engine.git//modules/cwe_lambda?ref=v0.5.7"
   rule_name        = "DetectRootUserActivity"
   rule_description = "Rule to check when the root user performs any actions"
 
