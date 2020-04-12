@@ -1,6 +1,6 @@
-module "detect_root_user_activity" {
+module "root_user_activity" {
   source           = "git::https://github.com/cloudmitigator/reflex-engine.git//modules/cwe_lambda?ref=v0.5.7"
-  rule_name        = "DetectRootUserActivity"
+  rule_name        = "RootUserActivity"
   rule_description = "Rule to check when the root user performs any actions"
 
   event_pattern = <<PATTERN
@@ -17,7 +17,7 @@ module "detect_root_user_activity" {
 }
 PATTERN
 
-  function_name   = "DetectRootUserActivity"
+  function_name   = "RootUserActivity"
   source_code_dir = "${path.module}/source"
   handler         = "root_user_activity.lambda_handler"
   lambda_runtime  = "python3.7"
@@ -25,10 +25,10 @@ PATTERN
     SNS_TOPIC = var.sns_topic_arn
   }
 
-  queue_name    = "DetectRootUserActivity"
+  queue_name    = "RootUserActivity"
   delay_seconds = 60
 
-  target_id  = "DetectRootUserActivity"
+  target_id  = "RootUserActivity"
 
   sns_topic_arn  = var.sns_topic_arn
   sqs_kms_key_id = var.reflex_kms_key_id

@@ -1,4 +1,4 @@
-# reflex-aws-detect-root-user-activity  
+# reflex-aws-root-user-activity  
 A Reflex rule for detecting activity by the account root user.
 
 To learn more about AWS account root users, see [the AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html).
@@ -18,7 +18,7 @@ rules:
 or add it directly to your Terraform:  
 ```
 module "detect-root-user-activity" {
-  source            = "git::https://github.com/cloudmitigator/reflex-aws-detect-root-user-activity.git?ref=latest"
+  source            = "git::https://github.com/cloudmitigator/reflex-aws-root-user-activity.git?ref=latest"
   sns_topic_arn     = module.central-sns-topic.arn
   reflex_kms_key_id = module.reflex-kms-key.key_id
 }
@@ -33,4 +33,4 @@ This rule has no configuration options.
 If you are interested in contributing, please review [our contribution guide](https://docs.cloudmitigator.com/about/contributing.html).
 
 ## License
-This Reflex rule is made available under the MPL 2.0 license. For more information view the [LICENSE](https://github.com/cloudmitigator/reflex-aws-detect-root-user-activity/blob/master/LICENSE) 
+This Reflex rule is made available under the MPL 2.0 license. For more information view the [LICENSE](https://github.com/cloudmitigator/reflex-aws-root-user-activity/blob/master/LICENSE) 
