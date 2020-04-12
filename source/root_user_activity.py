@@ -5,7 +5,7 @@ import json
 from reflex_core import AWSRule
 
 
-class RootUserActivityRule(AWSRule):
+class RootUserActivity(AWSRule):
     """ AWS rule for detecting root user activity """
 
     def __init__(self, event):
@@ -30,5 +30,5 @@ class RootUserActivityRule(AWSRule):
 
 def lambda_handler(event, _):
     """ Handles the incoming event """
-    rule = RootUserActivityRule(json.loads(event["Records"][0]["body"]))
+    rule = RootUserActivity(json.loads(event["Records"][0]["body"]))
     rule.run_compliance_rule()
