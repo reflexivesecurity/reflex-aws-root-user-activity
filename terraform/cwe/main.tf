@@ -1,5 +1,5 @@
 module "cwe" {
-  source      = "git::https://github.com/cloudmitigator/reflex-engine.git//modules/cwe_lambda?ref=v0.5.7"
+  source      = "git::https://github.com/cloudmitigator/reflex-engine.git//modules/cwe_lambda?ref=v0.6.0"
   name        = "RootUserActivity"
   description = "Rule to check when the root user performs any actions"
 
