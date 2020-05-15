@@ -25,7 +25,7 @@ class RootUserActivity(AWSRule):
 
     def get_remediation_message(self):
         """ Returns a message about the remediation action that occurred """
-        return f"Root user activity was detected."
+        return "Root user activity was detected."
 
 
 def lambda_handler(event, _):
